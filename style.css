@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a40; /* Gris oscuro */
+    width: 100vw;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    list-style-type: none; /* Remove bullets */
+}
+
+#pomodoro25,
+#pomodoro20 {
+    display: none;
+}
+
+main {
+    background-color: #4c0027; /* Fondo oscuro más claro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra con transparencia */
+    text-align: center;
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Alinear elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    min-height: 85vh; /* Ajustar altura mínima para que el footer quede abajo */
+}
+
+
+.timer {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    border: 1px solid white;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #020202; /* Gris oscuro */
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    border:1px solid white!important;
+}
+
+button:hover {
+    background-color: #616161; /* Gris más claro al pasar el ratón */
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #1a1a40; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+    text-align: center;
+}

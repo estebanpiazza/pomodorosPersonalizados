@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoros de Steve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="flex-container">
+            <li class="liNav"><button id="boton25">Pomodoro para el itba(25)</button></li>
+            <li class="liNav"><button id="boton20">Pomodoro para el limerick(20)</button></li>
+        </nav>
+    </header>
+    <main id="main">
+        <div id="pomodoro25">
+            <div class="timer" id="timer1">25:00</div>
+            <div class="controls">
+                <button onclick="pomodoro25.startTimer()">Empezar</button>
+                <button onclick="pomodoro25.pauseTimer()">Pausar</button>
+                <button onclick="pomodoro25.resetTimer()">Reinciar</button>
+                <button onclick="pomodoro25.skipSegment()">Siguiente</button>
+            </div>
+        </div>
+        <div id="pomodoro20">
+            <div class="timer" id="timer2">20:00</div>
+            <div class="controls">
+                <button onclick="pomodoro20.startTimer()">Empezar</button>
+                <button onclick="pomodoro20.pauseTimer()">Pausar</button>
+                <button onclick="pomodoro20.resetTimer()">Reinciar</button>
+                <button onclick="pomodoro20.skipSegment()">Siguiente</button>
+            </div>
+        </div>
+    </main>
+    <footer>Creado por <a href="https://www.linkedin.com/in/estebanpiazza/" target="_blank">Esteban Piazza</a></footer>
+</body>
+<script src="script.js"></script>
+</html>
