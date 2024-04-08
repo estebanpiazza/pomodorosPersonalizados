@@ -16,7 +16,6 @@ boton20.addEventListener("click",function(){
 })
 
 //******************************************************* */
-
 let pomodoro25 = {
     workMinutes: 25,
     shortBreakMinutes: 5,
@@ -67,6 +66,7 @@ let pomodoro25 = {
             changeBackgroundColor('#082032'); // Azul oscuro para descanso
         }
         playSound(); // Reproducir sonido al cambiar de segmento
+        updateTitle(this.minutes, this.seconds); // Actualizar el título de la pestaña
     },
 
     updateTimer: function() {
@@ -79,6 +79,7 @@ let pomodoro25 = {
             this.seconds--;
         }
         this.updateDisplay();
+        updateTitle(this.minutes, this.seconds); // Actualizar el título de la pestaña
     },
 
     updateDisplay: function() {
@@ -137,6 +138,7 @@ let pomodoro20 = {
             changeBackgroundColor('#082032'); // Azul oscuro para descanso
         }
         playSound(); // Reproducir sonido al cambiar de segmento
+        updateTitle(this.minutes, this.seconds); // Actualizar el título de la pestaña
     },
 
     updateTimer: function() {
@@ -149,6 +151,7 @@ let pomodoro20 = {
             this.seconds--;
         }
         this.updateDisplay();
+        updateTitle(this.minutes, this.seconds); // Actualizar el título de la pestaña
     },
 
     updateDisplay: function() {
@@ -157,6 +160,12 @@ let pomodoro20 = {
         document.getElementById("timer2").textContent = displayMinutes + ":" + displaySeconds;
     }
 };
+
+// Función para actualizar el título de la pestaña con el tiempo restante del temporizador
+function updateTitle(minutes, seconds) {
+    document.title = `${minutes}:${seconds} - Pomodoro Timer`;
+}
+
 
 function playSound() {
     let audio = new Audio('cambio.mp3');
@@ -167,3 +176,5 @@ function playSound() {
 function changeBackgroundColor(color) {
     document.getElementById("main").style.backgroundColor = color;
 }
+
+

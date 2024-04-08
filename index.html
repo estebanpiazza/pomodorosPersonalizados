@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoros de Steve</title>
+    <title id="pageTitle">Pomodoro Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -37,5 +37,8 @@
     </main>
     <footer>Creado por <a href="https://www.linkedin.com/in/estebanpiazza/" target="_blank">Esteban Piazza</a></footer>
 </body>
-<script src="script.js"></script>
+<script src="script.js">
+            let timerWorker = new Worker('timer.js');
+
+</script>
 </html>
