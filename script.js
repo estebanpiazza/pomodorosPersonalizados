@@ -166,11 +166,17 @@ function updateTitle(minutes, seconds) {
     document.title = `${minutes}:${seconds} - Pomodoro Timer`;
 }
 
-
 function playSound() {
-    let audio = new Audio('cambio.mp3');
-    audio.volume = 0.3;
-    audio.play();
+    let audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    let oscillator = audioContext.createOscillator();
+    oscillator.connect(audioContext.destination);
+    oscillator.type = 'triangle'; // Tipo de onda (puedes cambiarlo si lo deseas)
+    oscillator.start();
+
+    // Detener el sonido después de un tiempo (1 segundo en este caso)
+    setTimeout(function() {
+        oscillator.stop();
+    }, 1000);
 }
 
 function changeBackgroundColor(color) {
